@@ -19,5 +19,6 @@ describe("url_parser_does_work", function()
       "http://localhost/api/v1/bla",
       handler.handle("v", "[url](http://localhost/api/v1/bla) [url123](https://google.com)")
     )
+    assert.equals("static/image.png", handler.handle("v", "![embeded image](static/image.png)"))
   end)
 end)
